@@ -1,0 +1,66 @@
+@Metadata.layer: #PARTNER
+@UI.headerInfo: {
+    typeName: 'Jewel',
+    typeNamePlural: 'Jewels',
+    title: { type: #STANDARD, label: 'Jewel Item', value: 'ItemId' }
+}
+annotate entity ZC_JEWEL with
+{
+  @UI.facet: [ { id:            'Jewel',
+                 purpose:       #STANDARD,
+                 type:          #IDENTIFICATION_REFERENCE,
+                 label:         'Jewel Details',
+                 position:      10 } ]
+
+  @UI.hidden: true
+  ItemUuid;
+
+  @UI: { lineItem:       [ { position: 10, label: 'Item ID' } ],
+         identification: [ { position: 10, label: 'Item ID' } ],
+         selectionField: [ { position: 10 } ] }
+  ItemId;
+
+  @UI: { lineItem:       [ { position: 20, label: 'Description' } ],
+         identification: [ { position: 20, label: 'Description' } ] }
+  Description;
+
+  @UI: { lineItem:       [ { position: 30, label: 'Category' } ],
+         identification: [ { position: 30, label: 'Category' } ],
+         selectionField: [ { position: 20 } ] }
+  Category;
+
+  @UI: { lineItem:       [ { position: 40, label: 'Metal Type' } ],
+         identification: [ { position: 40, label: 'Metal Type' } ] }
+  MetalType;
+
+  @UI: { lineItem:       [ { position: 50, label: 'Purity' } ],
+         identification: [ { position: 50, label: 'Purity' } ] }
+  Purity;
+
+  @UI: { lineItem:       [ { position: 60, label: 'Weight' } ],
+         identification: [ { position: 60, label: 'Weight' } ] }
+  Weight;
+
+  @UI.hidden: true
+  WeightUnit;
+
+  @UI: { lineItem:       [ { position: 70, label: 'Acquisition Price' } ],
+         identification: [ { position: 70, label: 'Acquisition Price' } ] }
+  AcquisitionPrice;
+
+  @UI: { lineItem:       [ { position: 80, label: 'Currency' } ],
+         identification: [ { position: 80, label: 'Currency' } ] }
+  CurrencyCode;
+
+  /* Administrative Fields */
+  @UI.hidden: true
+  LocalCreatedBy;
+  @UI.hidden: true
+  LocalCreatedAt;
+  @UI.hidden: true
+  LocalLastChangedBy;
+  @UI: { identification: [ { position: 90 } ] }
+  LocalLastChangedAt;
+  @UI.hidden: true
+  LastChangedAt;
+}

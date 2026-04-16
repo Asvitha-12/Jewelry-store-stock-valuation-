@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZJEWEL_IUI {
+  expose ZC_JEWEL;
+}
